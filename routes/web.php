@@ -18,10 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return 'Admin Page';
-})->name('admin');
-
 Auth::routes([
     'verify' => true
 ]);
