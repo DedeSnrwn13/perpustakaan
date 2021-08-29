@@ -41,8 +41,6 @@
     </div>
     <!-- /.content-wrapper -->
 
-    @include('admin.templates.partials.control')
-
     <!-- Main Footer -->
     @include('admin.templates.partials.footer')
 </div>
