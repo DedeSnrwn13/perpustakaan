@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class DataController extends Controller
 {
@@ -12,10 +13,8 @@ class DataController extends Controller
     {
         $authors = Author::orderBy('name', 'asc');
 
-        return datatables()->of($authors)
-                        ->addColumn('action', function(Author $author) {
-                            return '<a href="' . route('admin.author.edit', $author) . '" class="btn btn-warning">Edit</a>';
-                        })
+        return DataTables::of($authors)
+                        ->addColumn('action', 'admin.author.action')
                         ->addIndexColumn()
                         ->toJson();
     }
