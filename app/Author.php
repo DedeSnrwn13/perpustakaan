@@ -9,4 +9,9 @@ class Author extends Model
     protected $fillable = ['name'];
 
     public $timestamps = false;
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }
