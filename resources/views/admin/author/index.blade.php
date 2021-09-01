@@ -10,8 +10,6 @@
                     <a href="{{ route('admin.author.create') }}" class="btn btn-primary ml-3">Tambah Penulis</a>
                 </div>
 
-                @include('admin.templates.partials.alerts')
-
                 <div class="card-body">
                     <table id="tableAuthor" class="table table-bordered table-hover">
                         <thead>
@@ -37,6 +35,9 @@
 @endsection
 
 @push('scripts')
+    <script src="{{ asset('assets/plugins/bs-notify.min.js') }}"></script>
+    @include('admin.templates.partials.alerts')
+
     <script>
         $(function () {
             $('#tableAuthor').DataTable({
