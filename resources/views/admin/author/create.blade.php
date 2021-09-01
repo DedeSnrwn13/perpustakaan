@@ -14,7 +14,10 @@
 
                         <div class="form-group">
                             <label for="">Nama</label>
-                            <input type="text" name="name" class="form-control" placeholder="Masukan nama penulis">
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Masukan nama penulis" value="{{ old('name') }}">
+                            @error('name')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="form-group">
