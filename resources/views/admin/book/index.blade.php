@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Data Buku</h3>
-                    <a href="{{ route('admin.author.create') }}" class="btn btn-primary ml-3">Tambah Penulis</a>
+                    <a href="{{ route('admin.book.create') }}" class="btn btn-primary ml-3">Tambah Buku</a>
                 </div>
 
                 <div class="card-body">

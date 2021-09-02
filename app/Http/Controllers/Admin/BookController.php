@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Author;
+use App\Book;
 
 class BookController extends Controller
 {
@@ -26,7 +28,10 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.book.create', [
+            'title' => 'Tambah Data Buku',
+            'authors' => Author::orderBy('name', 'ASC')->get()
+        ]);
     }
 
     /**
@@ -37,7 +42,29 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' =>'required',
+            'description' => 'required|min:20',
+            'author_id' => 'required',
+            'cover' => 'file|image',
+            'qty' => 'required|numeric'
+        ]);
+
+        $cover = null;
+
+        if ($request->hasFile('cover')) {
+            $cover = $request->file('cover')->store('assets/covers');
+        }
+
+        Book::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'author_id' => $request->author_id,
+            'qty' => $request->qty,
+            'cover' => $cover
+        ]);
+
+        return redirect()->route('admin.book.index')->with('success', 'Data buku berhasil ditambhkan');
     }
 
     /**

@@ -1,5 +1,7 @@
-<a href="{{ route('admin.book.edit', $model) }}" class="btn btn-warning">Edit</a>
-<button href="{{ route('admin.book.destroy', $model) }}" id="buttonDelete" class="btn btn-danger">Hapus</button>
+<div class="d-flex justify-content-between">
+    <a href="{{ route('admin.book.edit', $model) }}" class="btn btn-warning">Edit</a>
+    <button href="{{ route('admin.book.destroy', $model) }}" id="buttonDelete" class="btn btn-danger">Hapus</button>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
