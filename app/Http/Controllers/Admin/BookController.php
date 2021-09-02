@@ -138,6 +138,7 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
+        Storage::delete($book->cover);
         $book->delete();
 
         return redirect()->route('admin.book.index')->with('danger', 'Data buku berhasil dihapus');

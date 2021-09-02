@@ -7,22 +7,4 @@
 <!-- AdminLTE App -->
 <script src="{{  asset('assets/dist/js/adminlte.js') }}"></script>
 
-<!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
-<script src="{{  asset('assets/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-<script src="{{  asset('assets/plugins/raphael/raphael.min.js') }}"></script>
-<script src="{{  asset('assets/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-<script src="{{  asset('assets/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
-<!-- ChartJS -->
-<script src="{{  asset('assets/plugins/chart.js/Chart.min.js') }}"></script>
-<!-- DataTables -->
-<script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
-
-<!-- AdminLTE for demo purposes -->
-<script src="{{  asset('assets/dist/js/demo.js') }}"></script>
-
-
 @stack('scripts')
