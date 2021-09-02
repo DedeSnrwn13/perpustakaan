@@ -46,5 +46,5 @@ Breadcrumbs::for('admin.book.create', function (BreadcrumbTrail $trail) {
 Breadcrumbs::for('admin.book.edit', function (BreadcrumbTrail $trail, $book) {
     $trail->push('Beranda', route('admin.dashboard'));
     $trail->push('Buku', route('admin.book.index'));
-    $trail->push('Edit Penulis', route('admin.book.edit', $book));
+    $trail->push('Edit Buku', route('admin.book.edit', $book));
 });
