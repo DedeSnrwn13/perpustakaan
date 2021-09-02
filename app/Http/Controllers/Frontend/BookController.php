@@ -16,4 +16,11 @@ class BookController extends Controller
             'books' => $books
         ]);
     }
+
+    public function show(Book $book)
+    {
+        return view('frontend.book.show', [
+            'book' => $book
+        ]);
+    }
 }
