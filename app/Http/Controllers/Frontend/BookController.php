@@ -27,11 +27,10 @@ class BookController extends Controller
     }
     public function borrow(Book $book)
     {
-        BorrowHistory::create([
-            'user_id' => Auth::user()->id,
-            'book_id' => $book->id
-        ]);
+        $user = Auth::user();
 
-        return 'Ok';
+        $user->borrow()->attach($book);
+
+        return redirect()->back();
     }
 }
