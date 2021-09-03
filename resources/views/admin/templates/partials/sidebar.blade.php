@@ -26,7 +26,6 @@
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Penulis
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
@@ -36,7 +35,6 @@
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Buku
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
@@ -46,7 +44,6 @@
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
