@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="row">
-        <h2>
+        <h3>
             Buku yang sedang dipinjam
-        </h2>
+        </h3>
         @foreach ($books as $book)
             <div class="card horizontal hoverable">
                 <div class="card-image">
