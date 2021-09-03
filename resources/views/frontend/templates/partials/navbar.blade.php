@@ -11,14 +11,15 @@
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="{{ route('home') }}">Dashboard</a></li>
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                         </ul>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        
-                        <li><a href="#" class="dropdown-trigger" data-target="dropdown1">{{ Auth::user()->name }}</a></li>
+
+                        <li><a href="#" class="dropdown-trigger" data-target="dropdown1">Hi, <b>{{ Auth::user()->name }}</b></a></li>
                     @endguest
                 </ul>
             </div>
