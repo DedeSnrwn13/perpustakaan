@@ -12,5 +12,8 @@
 
     <!-- Compiled and minified JavaScript -->
     @include('frontend.templates.partials.scripts')
+
+    <!-- Toast  -->
+    @include('frontend.templates.partials.toast')
 </body>
 </html>
