@@ -15,6 +15,11 @@ class BorrowHistory extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function admin()
+    {
+        return $this->belongsTo(User::class, 'id', 'admin_id');
+    }
+
     public function book()
     {
         return $this->belongsTo(Book::class);

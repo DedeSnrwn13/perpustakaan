@@ -13,7 +13,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Data Pinjaman Buku</h3>
+                    <h3 class="card-title">Data Peminjaman Buku</h3>
                 </div>
 
                 <div class="card-body">
@@ -21,8 +21,9 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nama</th>
+                                <th>Nama Peminjam</th>
                                 <th>Judul Buku</th>
+                                <th>Penulis</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -33,11 +34,11 @@
     </div>
 </div>
 
-<form action="" method="POST" id="deleteForm" enctype="multipart/form-data">
+<form action="" method="POST" id="returnForm" enctype="multipart/form-data">
     @csrf
-    @method('DELETE')
+    @method('PUT')
 
-    <input type="submit" value="Hapus" style="display: none;">
+    <input type="submit" value="Kembalikan" style="display: none;">
 </form>
 @endsection
 
@@ -60,6 +61,7 @@
                     { data: 'DT_RowIndex', orderable: false, searchable: false },
                     { data: 'user' },
                     { data: 'book_title' },
+                    { data: 'author' },
                     { data: 'action' }
                 ]
             });
