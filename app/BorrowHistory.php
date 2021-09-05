@@ -24,4 +24,9 @@ class BorrowHistory extends Model
     {
         return $this->belongsTo(Book::class);
     }
+
+    public function scopeIsBorrowed($query)
+    {
+        return $query->where('returned_at', null);
+    }
 }
