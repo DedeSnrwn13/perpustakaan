@@ -24,9 +24,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $page = 1;
+                                if (request()->has('page')) {
+                                    $page = request('page');
+                                }
+
+                                $no = (env('PAGINATION_ADMIN') * $page) - (env('PAGINATION_ADMIN') - 1); // 20 - 9 = 11
+                            @endphp
                             @foreach ($books as $book)
                                 <tr>
-                                    <td>1</td>
+                                    <td>{{ $no++ }}</td>
                                     <td>{{ $book->title }}</td>
                                     <td>{{ $book->description }}</td>
                                     <td>{{ $book->qty }}</td>
