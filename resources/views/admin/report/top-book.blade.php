@@ -1,11 +1,5 @@
 @extends('admin.templates.default')
 
-@push('css')
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
-@endpush
 
 @section('content')
 <div class="container-fluid">
@@ -13,7 +7,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Laporan Buku Terlaris</h3>
+                    <h3 class="card-title">Laporan User Teraktif</h3>
                 </div>
 
                 <div class="card-body">

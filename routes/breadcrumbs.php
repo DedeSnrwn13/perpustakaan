@@ -57,8 +57,14 @@ Breadcrumbs::for('admin.borrow.index', function (BreadcrumbTrail $trail) {
 });
 
 
-// Report Index
+// Report Top Book
 Breadcrumbs::for('admin.report.top-book', function (BreadcrumbTrail $trail) {
     $trail->push('Beranda', route('admin.dashboard'));
     $trail->push('Buku Terbanyak Dipinjam', route('admin.report.top-book'));
+});
+
+// Report Top User
+Breadcrumbs::for('admin.report.top-user', function (BreadcrumbTrail $trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('User Teraktif', route('admin.report.top-user'));
 });
