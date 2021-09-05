@@ -55,3 +55,10 @@ Breadcrumbs::for('admin.borrow.index', function (BreadcrumbTrail $trail) {
     $trail->push('Beranda', route('admin.dashboard'));
     $trail->push('Peminjaman', route('admin.borrow.index'));
 });
+
+
+// Report Index
+Breadcrumbs::for('admin.report.top-book', function (BreadcrumbTrail $trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Buku Terbanyak Dipinjam', route('admin.report.top-book'));
+});
