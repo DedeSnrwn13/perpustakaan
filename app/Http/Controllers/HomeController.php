@@ -27,7 +27,7 @@ class HomeController extends Controller
         $books = Auth::user()->borrow;
 
         return view('home', [
-            'books' => $books
+            'books' => $books,
         ]);
     }
 }

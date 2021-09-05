@@ -15,14 +15,16 @@ class BookController extends Controller
         $books = Book::paginate(10);
 
         return view('frontend.book.index', [
-            'books' => $books
+            'books' => $books,
+            'title' => 'Beranda Perpusku'
         ]);
     }
 
     public function show(Book $book)
     {
         return view('frontend.book.show', [
-            'book' => $book
+            'book' => $book,
+            'title' => 'Detail Buku: ' .  $book->title
         ]);
     }
     public function borrow(Book $book)
