@@ -24,6 +24,8 @@ class BorrowController extends Controller
             'admin_id' => Auth::user()->id,
         ]);
 
+        $borrowHistory->book()->increment('qty');
+
         return redirect()->back()->with('success', 'Buku dikembalikan');
     }
 }
